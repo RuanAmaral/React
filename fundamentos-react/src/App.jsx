@@ -1,5 +1,8 @@
 import React from "react";
 
+import MegaSena from "./components/megasena/MegaSena"; 
+import Contador from "./components/contadores/Contador";
+import Input from "./components/formulario/Input";
 import IndiretaPai from "./components/comunicacao/IndiretaPai";
 import DiretaPai from "./components/comunicacao/DiretaPai";
 import UsuarioInfo from "./components/condicional/UsuarioInfo";
@@ -20,7 +23,16 @@ export default (props) => {
     <div className="App">
       <h1>Fundamentos</h1>
       <div className="Cards">
-      <Card titulo="#11 - Comunicação Indireta " color="#56064A">
+      <Card titulo="#14 - Mega Sena " color="#003008">
+          <MegaSena valorSortear={6} ></MegaSena>
+        </Card>
+        <Card titulo="#13 - Contador " color="#DB222A">
+          <Contador numeroInicial={10}></Contador>
+        </Card>
+        <Card titulo="#12 - Formularios " color="#3A0CA3">
+          <Input></Input>
+        </Card>
+        <Card titulo="#11 - Comunicação Indireta " color="#56064A">
           <IndiretaPai></IndiretaPai>
         </Card>
         <Card titulo="#10 - Comunicação Direta " color="#001219">
@@ -28,7 +40,7 @@ export default (props) => {
         </Card>
         <Card titulo="#09 - Par ou Impar " color="#03045E">
           <ParOuImpar numero="5"></ParOuImpar>
-          <UsuarioInfo usuario={{nome : 'Joel'}}></UsuarioInfo>
+          <UsuarioInfo usuario={{ nome: "Joel" }}></UsuarioInfo>
         </Card>
         <Card titulo="#08 - Desafio de Repetição " color="#5C5403">
           <TabelaProdutos></TabelaProdutos>
